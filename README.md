@@ -9,6 +9,7 @@ http://stackoverflow.com/questions/32744780/install-docker-toolbox-on-a-mac-via-
 ### 1. Create .env file
 
 ```
+NODE_ENV=development
 MYSQL_USER=root
 MYSQL_ROOT_PASSWORD=<SEE_PASSPACK>
 MYSQL_HOST=<SEE_DOCKER_MACHINE_IP>
@@ -18,5 +19,5 @@ MYSQL_STAGING_DATABASE_NAME=prism_staging
 MYSQL_PROD_DATABASE_NAME=prism_production
 ```
 
-### 2. Start mysql and run migration
+### 2. Start mysql and run migrations
 `docker-compose up -d`

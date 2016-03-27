@@ -11,7 +11,10 @@ module.exports = {
       password: process.env.MYSQL_ROOT_PASSWORD,
     },
     seeds: {
-      directory: './seeds/dev',
+      directory: './db/seeds/dev',
+    },
+    migrations: {
+      directory: './db/migrations',
     },
   },
 
@@ -25,7 +28,7 @@ module.exports = {
       password: process.env.MYSQL_ROOT_PASSWORD,
     },
     seeds: {
-      directory: './seeds/staging',
+      directory: './db/seeds/staging',
     },
   },
 

@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:5.9.1
 
 MAINTAINER prism inc. <ksespinola@gmail.com>
 
@@ -8,4 +8,4 @@ WORKDIR /code
 
 RUN npm install
 
-CMD ["npm", "run", "migrate:dev"]
+CMD ["npm", "run", "db:setup:dev"]
