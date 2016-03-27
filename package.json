@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate:dev": "knex migrate:latest --env development",
-    "migrate:production": "knex migrate:latest --env production"
+    "migrate:production": "knex migrate:latest --env production",
+    "seed:dev": "knex seed:run --env development"
   },
   "author": "prism inc.",
   "license": "ISC",

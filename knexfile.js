@@ -8,7 +8,10 @@ module.exports = {
       host: process.env.MYSQL_HOST,
       port: process.env.MYSQL_PORT,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD,
+      password: process.env.MYSQL_ROOT_PASSWORD,
+    },
+    seeds: {
+      directory: './seeds/dev',
     },
   },
 
@@ -19,7 +22,10 @@ module.exports = {
       host: process.env.MYSQL_HOST,
       port: process.env.MYSQL_PORT,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD,
+      password: process.env.MYSQL_ROOT_PASSWORD,
+    },
+    seeds: {
+      directory: './seeds/staging',
     },
   },
 
@@ -29,7 +35,7 @@ module.exports = {
       database: process.env.MYSQL_PROD_DATABASE_NAME,
       host: process.env.MYSQL_HOST,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_PASSWORD,
+      password: process.env.MYSQL_ROOT_PASSWORD,
     },
   },
 };
