@@ -1,5 +1,5 @@
 # Prism Server
-Starts up mysql and migrates database for an instance of prism via docker.
+Starts mysql and migrate/seed database for prism within docker instance
 
 ## Install Docker
 http://stackoverflow.com/questions/32744780/install-docker-toolbox-on-a-mac-via-command-line
