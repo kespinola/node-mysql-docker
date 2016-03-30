@@ -1,5 +1,5 @@
 # Prism Server
-Starts mysql and migrate/seed database for prism within docker instance
+Starts mysql and migrate/seed database for prism within docker container
 
 ## Install Docker
 http://stackoverflow.com/questions/32744780/install-docker-toolbox-on-a-mac-via-command-line
@@ -10,14 +10,12 @@ http://stackoverflow.com/questions/32744780/install-docker-toolbox-on-a-mac-via-
 
 ```
 NODE_ENV=development
-MYSQL_USER=root
+DOCKER_MACHINE_IP=<SEE_DOCKER_MACHINE_IP>
 MYSQL_ROOT_PASSWORD=<SEE_PASSPACK>
-MYSQL_HOST=<SEE_DOCKER_MACHINE_IP>
-MYSQL_PORT=6603
-MYSQL_DEV_DATABASE_NAME=prism_develop
-MYSQL_STAGING_DATABASE_NAME=prism_staging
-MYSQL_PROD_DATABASE_NAME=prism_production
+MYSQL_DATABASE=prism_develop
+MYSQL_USER=prism_admin
+MYSQL_PASSWORD=<SEE_PASSPACK>
 ```
 
-### 2. Start mysql and run migrations
+### 2. Start mysql and run migrations/seed
 `docker-compose up -d`

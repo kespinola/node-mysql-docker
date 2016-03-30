@@ -14,4 +14,4 @@ WORKDIR /code
 
 RUN NODE_ENV=production npm install
 
-CMD ["dockerize", "-wait", "tcp://db:3306", "npm", "run", "migrate"]
+CMD ["dockerize", "-wait", "tcp://mysql:3306", "npm", "run", "migrate:seed"]

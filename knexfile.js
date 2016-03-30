@@ -4,11 +4,10 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      database: process.env.MYSQL_DEV_DATABASE_NAME,
-      host: process.env.MYSQL_HOST,
-      port: process.env.MYSQL_PORT,
+      host: process.env.DOCKER_MACHINE_IP,
+      database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_ROOT_PASSWORD,
+      password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
       directory: './db/seeds/dev',
@@ -21,11 +20,10 @@ module.exports = {
   staging: {
     client: 'mysql',
     connection: {
-      database: process.env.MYSQL_STAGING_DATABASE_NAME,
-      host: process.env.MYSQL_HOST,
-      port: process.env.MYSQL_PORT,
+      host: process.env.DOCKER_MACHINE_IP,
+      database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_ROOT_PASSWORD,
+      password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
       directory: './db/seeds/staging',
@@ -38,10 +36,10 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      database: process.env.MYSQL_PROD_DATABASE_NAME,
-      host: process.env.MYSQL_HOST,
+      host: process.env.DOCKER_MACHINE_IP,
+      database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
-      password: process.env.MYSQL_ROOT_PASSWORD,
+      password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
       directory: './db/seeds/production',
