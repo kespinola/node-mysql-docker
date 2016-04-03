@@ -15,6 +15,7 @@
     "bluebird": "^3.3.4",
     "dotenv": "^2.0.0",
     "electrolyte": "^0.2.0",
+    "jsonwebtoken": "^5.7.0",
     "knex": "^0.10.0",
     "mysql": "^2.10.2"
   },

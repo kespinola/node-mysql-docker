@@ -20,7 +20,7 @@ module.exports = {
   staging: {
     client: 'mysql',
     connection: {
-      host: process.env.DOCKER_MACHINE_IP,
+      host: process.env.DOCKER_MACHINE_STAGING_IP,
       database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
