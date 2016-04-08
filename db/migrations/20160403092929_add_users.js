@@ -13,7 +13,7 @@ exports.up = function (knex) {
           login.timestamp('created_at').defaultTo(knex.fn.now());
           login.timestamp('updated_at').nullable();
           login.integer('user_id').unsigned().references('users.id').onDelete('CASCADE');
-          login.string('email');
+          login.string('email').unique();
           login.string('password_hash');
         });
     });
@@ -21,8 +21,8 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema
-    .dropTable('users')
+    .dropTable('logins')
     .then(function () {
-      return knex.schema.dropTable('logins');
+      return knex.schema.dropTable('users');
     });
 };
