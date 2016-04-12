@@ -4,13 +4,13 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      host: process.env.DOCKER_MACHINE_IP,
+      host: process.env.MYSQL_HOSTNAME,
       database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
-      directory: './db/seeds/dev',
+      directory: './db/seeds',
     },
     migrations: {
       directory: './db/migrations',
@@ -20,13 +20,13 @@ module.exports = {
   staging: {
     client: 'mysql',
     connection: {
-      host: process.env.DOCKER_MACHINE_STAGING_IP,
+      host: process.env.MYSQL_HOSTNAME,
       database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
-      directory: './db/seeds/staging',
+      directory: './db/seeds',
     },
     migrations: {
       directory: './db/migrations',
@@ -36,13 +36,13 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      host: process.env.DOCKER_MACHINE_IP,
+      host: process.env.MYSQL_HOSTNAME,
       database: process.env.MYSQL_DATABASE,
       user: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
     },
     seeds: {
-      directory: './db/seeds/production',
+      directory: './db/seeds',
     },
     migrations: {
       directory: './db/migrations',

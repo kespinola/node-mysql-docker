@@ -1,0 +1,6 @@
+version: "2"
+services:
+  worker:
+    env_file: .env-staging
+  mysql:
+    env_file: .env-staging
